@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTf-8">
+        <meta name="view point" content="width=device-width, initial-scale=1.0">
+        <title>Tech Trend Store</title>
+        <link rel="stylesheet" href="styles.css">
+        <body>
+            <header>
+                <nav>
+                    <h1 class="logo">Tech Trend Store</h1>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About US</a></li>
+                        <li><a href="#products">Our Products</a></li>
+                        <li><a href="#reviews">Customer Reviews</a></li>
+                        <li><a href="#contact">Contact US</a></li>
+                        <li><button id="toggle">Dark Mode</button></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="home" class="hero">
+                <h1>Tech Trend Store</h1>
+                <p>We Provides your Dream Accessories</p>
+                <button class="shop-btn">Shop Now</button>
+            </section>
+            <section id="about">
+                <h2>About Us</h2>
+                <p> At TechTrend Store, we specialize in delivering cutting‑edge digital products and accessories 
+                    that empower individuals and businesses to thrive in the modern world. Our focus is on 
+                    innovation, quality, and customer satisfaction — whether you’re looking for laptops, 
+                    smartphones, or smart gadgets, we provide solutions that keep you ahead of the trend.
+                </p>
+            </section>
+
+
+            <section id="products">
+                <h2>Our Products</h2>
+                <div class="filter-buttons">
+                    <button data-category="All">All</button>
+                    <button data-category="laptops">Laptops</button>
+                    <button data-category="desktops">Destops</button>
+                    <button data-category="phone">Smartphones</button>
+                    <button data-category="headphones">Headphones</button>
+
+                </div>
+                <div class="product-grid">
+                    <article class="product" data-category="laptops">
+                        <img src="Laptop1.jpg" alt="Laptop">
+                        <h3>HP brand Laptop</h3>
+                        <p>High performance Laptop for intensive tasks like coding</p>
+                        <p class="price">$1500</p>
+                    </article>
+                    <article class="product" data-category="phone">
+                        <img src="Smartphone1.jpg" alt="Smartphone">
+                        <h3>iPhone 16 Pro</h3>
+                        <p>iPhone 16 Pro Full box for affordable price</p>
+                        <p class="price">$950</p>
+                    </article>
+                    <article class="product" data-category="headphones">
+                        <img src="headphone1.jpg" alt="Headphones">
+                        <h3>Wireless Headphone</h3>
+                        <p>Noise-cancelling headphones with long battery life</p>
+                        <p class="price">$30</p>
+                    </article>
+                    <article class="product" data-category="laptops">
+                        <img src="MacbookAir1.jpg" alt="Macbook">
+                        <h3>Macbook Air 2019</h3>
+                        <p>High performance Macbook Air 2019 for proffessional users</p>
+                        <p class="price">$1100</p>
+                    </article>
+                    <article class="product" data-category="headphones">
+                        <img src="AirPod.jpg" alt="AirPod">
+                        <h3>White bluetooth AirPod</h3>
+                        <p>Bluetooth AirPod for mobile phones and Laptop</p>
+                        <p class="price">$15</p>
+                    </article>
+                    <article class="product" data-category="phone">
+                        <img src="Samsung1.jpg" alt="Samsung Galaxy">
+                        <h3>Samsung brand mobile phone</h3>
+                        <p>Samsung Galaxy S25 full box with affordable price</p>
+                        <p class="price">$890</p>
+                    </article>
+                    <article class="product" data-category="phone">
+                        <img src="Smartphone.jpg" alt="iPhone">
+                        <h3>iPhone 14 Pro Max</h3>
+                        <p>iPhone 14 Pro Max Second hand(Used)</p>
+                        <p class="price">$450</p>
+                    </article>
+                    <article class="product" data-category="desktops">
+                        <img src="Desktop.jpg" alt="PC">
+                        <h3>Customized PC</h3>
+                        <p>Gaming PC and High performance tasks</p>
+                        <p class="price">$3000</p>
+                    </article>
+                </div>
+            </section>
+            <section id="reviews">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-grid">
+                    <article class="reviews">
+                        <img src="customer1.jpg" alt="Customer 1">
+                        <p>"TechTrend Store has the best laptops I’ve ever used. Highly recommend!"</p>
+                        <h4>-Hadhrat S. Silima</h4>
+                    </article>
+                    <article class="reviews">
+                        <img src="customer.jpg" alt="Customer">
+                        <p>"Amazing customer service and fast delivery. My phone arrived in perfect condition."</p>
+                        <h4>-Ali M. Ali</h4>
+                    </article>
+                    <article class="reviews">
+                        <img src="customer3.jpg" alt="Customer 3">
+                        <p>"The wireless headphones are incredible — great sound and battery life.</p>
+                        <h4>-Aisha T.</h4>
+                    </article>
+                </div>
+            </section>
+            <script> window.addEventListener("load", () => {
+    alert("Welcome to TechTrend Store!");
+  });
+  </script>
+  <button id="scrollTopBtn">↑ Top</button>
+  <script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+<script>
+    const form = document.getElementById("newsletterForm");
+    const emailInput = document.getElementById("email");
+
+    form.addEventListener("submit", (e) =>  {
+        const emailValue = emailInput.value;
+        // check if email contains both '@' and '.'
+        if(!email.includes("@") ||  !email.includes(".")) {
+            e.preventDefault();
+            alert("Please enter valid email address");
+        }
+    });
+</script>
+<script>
+    const filterButtons = document.querySelectorAll(".filter-buttons button");
+    const products = document.querySelectorAll(".product");
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
+            products.forEach(product => {
+                if(category === "All" || product.getAttribute("data-category")=== category) {
+                    product.style.display = "block";
+
+                } else {
+                    product.style.display = "none";
+
+                }
+            
+            });
+        });
+    });
+</script>
+</body>
+    </head>
+    <footer id="contact">
+        <h2>Contact US</h2>
+        <p>&copy; 2026 Tech Trend Store | Phone Number</p>
+        <div id="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://tiktok.com" target="_blank">Tiktok</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>          
+        </div>
+        <form>
+            <label for="email">Subscribe to our Shop:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+</html>
